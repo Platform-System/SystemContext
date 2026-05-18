@@ -14,6 +14,7 @@ jobs:
     secrets: inherit
     with:
       project_path: 'Platform.SystemContext.csproj'
+      test_path: 'Platform.SystemContext.Tests/Platform.SystemContext.Tests.csproj'
       dependencies: 'Platform-System/Platform.BuildingBlocks'
 
 
