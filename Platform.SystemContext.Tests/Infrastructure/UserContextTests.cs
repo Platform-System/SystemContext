@@ -38,6 +38,27 @@ public sealed class UserContextTests
     }
 
     [Fact]
+    public void Roles_WhenOnlyKeycloakJsonClaimsExist_AreReadSuccessfully()
+    {
+        var context = new DefaultHttpContext
+        {
+            User = new ClaimsPrincipal(new ClaimsIdentity(
+            [
+                new Claim("realm_access", """{"roles":["admin","seller"]}"""),
+                new Claim("resource_access", """{"gateway":{"roles":["catalog.write","admin"]}}""")
+            ], "Bearer"))
+        };
+
+        var userContext = new UserContext(new HttpContextAccessor { HttpContext = context });
+
+        Assert.Equal(3, userContext.Roles.Count);
+        Assert.Contains("admin", userContext.Roles);
+        Assert.Contains("seller", userContext.Roles);
+        Assert.Contains("catalog.write", userContext.Roles);
+        Assert.True(userContext.IsInRole("ADMIN"));
+    }
+
+    [Fact]
     public void Properties_WhenSubjectIsInvalid_FallsBackSafely()
     {
         var context = new DefaultHttpContext
