@@ -10,7 +10,7 @@ public sealed class UserContextTests
     [Fact]
     public void Properties_WhenClaimsExist_ReturnExpectedValues()
     {
-        var userId = Guid.NewGuid();
+        var userId = Guid.CreateVersion7();
         var context = new DefaultHttpContext
         {
             User = new ClaimsPrincipal(new ClaimsIdentity(
