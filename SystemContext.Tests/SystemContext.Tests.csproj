@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Platform.SystemContext.csproj" />
+    <ProjectReference Include="..\SystemContext.csproj" />
   </ItemGroup>
 
 </Project>

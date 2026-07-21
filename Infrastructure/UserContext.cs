@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Http;
-using Platform.BuildingBlocks.Abstractions;
-using Platform.SystemContext.Abstractions;
+using BuildingBlocks.Abstractions;
+using SystemContext.Abstractions;
 using System.Security.Claims;
 using System.Linq;
 using System.Text.Json;
 
-namespace Platform.SystemContext.Infrastructure
+namespace SystemContext.Infrastructure
 {
     public class UserContext : IUserContext, ICurrentUserProvider
     {

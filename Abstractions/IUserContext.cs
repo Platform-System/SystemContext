@@ -1,4 +1,4 @@
-namespace Platform.SystemContext.Abstractions
+namespace SystemContext.Abstractions
 {
     public interface IUserContext
     {

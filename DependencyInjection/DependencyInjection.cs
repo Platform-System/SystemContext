@@ -1,9 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
-using Platform.BuildingBlocks.Abstractions;
-using Platform.SystemContext.Abstractions;
-using Platform.SystemContext.Infrastructure;
+using BuildingBlocks.Abstractions;
+using SystemContext.Abstractions;
+using SystemContext.Infrastructure;
 
-namespace Platform.SystemContext.DependencyInjection
+namespace SystemContext.DependencyInjection
 {
     public static class DependencyInjection
     {

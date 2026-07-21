@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Http;
-using Platform.SystemContext.Infrastructure;
+using SystemContext.Infrastructure;
 using System.Security.Claims;
 using Xunit;
 
-namespace Platform.SystemContext.Tests.Infrastructure;
+namespace SystemContext.Tests.Infrastructure;
 
 public sealed class UserContextTests
 {
