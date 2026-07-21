@@ -10,12 +10,12 @@ on:
 
 jobs:
   build:
-    uses: Platform-System/Platform.CI-CD/.github/workflows/build-dotnet.yml@main
+    uses: Platform-System/CI-CD/.github/workflows/build-dotnet.yml@main
     secrets: inherit
     with:
-      project_path: 'Platform.SystemContext.csproj'
-      test_path: 'Platform.SystemContext.Tests/Platform.SystemContext.Tests.csproj'
-      dependencies: 'Platform-System/Platform.BuildingBlocks'
+      project_path: 'SystemContext.csproj'
+      test_path: 'SystemContext.Tests/SystemContext.Tests.csproj'
+      dependencies: 'Platform-System/BuildingBlocks'
 
 
 
